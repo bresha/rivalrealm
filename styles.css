@@ -1,0 +1,303 @@
+/* Base Styles and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header, footer {
+    background-color: #f12e5e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.tagline {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+/* Visual Styles */
+
+.visual img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Key Features Styles */
+#features {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features-title h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.feature-group {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow each feature group to equally take up available space */
+}
+
+#features h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#features ul {
+    list-style-type: none;
+}
+
+#features ul li {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+#features ul li::before {
+    content: '✔️';
+    margin-right: 10px;
+    color: #4CAF50;
+}
+
+/* Flexbox for larger screens (e.g., 768px and above) */
+@media (min-width: 768px) {
+    #features {
+        display: flex;
+        justify-content: space-between;
+    }
+    #features .feature-group {
+        margin: 0 10px; /* Add horizontal margins for spacing between feature groups */
+    }
+}
+
+
+/* Call to Action Styles */
+#cta {
+    background-color: #f12e5e;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-small {
+    width: 60%;
+    margin: auto;
+}
+
+#cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#cta p {
+    margin-bottom: 20px;
+}
+
+.google-form-wrapper {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Input styles */
+/* Basic Styles */
+input[type="text"], input[type="email"] {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Borders & Outlines */
+input[type="text"], input[type="email"]  {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none; /* Removes the default browser outline */
+}
+
+/* Placeholder Styles */
+input[type="text"]::placeholder, input[type="email"] ::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Focus & Active States */
+input[type="text"]:focus, input[type="email"] ::focus {
+    border-color: #007BFF; /* Change border color on focus */
+    box-shadow: 0 0 10px rgba(0,123,255,0.2); /* Add a subtle shadow on focus */
+}
+
+/* Transition & Animation */
+input[type="text"], input[type="email"]  {
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+}
+
+/* Button styles */
+/* Basic Styles */
+button {
+    width: 150px;
+    height: 50px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f12e5e;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+}
+
+/* Hover State */
+button:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+}
+
+/* Active State */
+button:active {
+    background-color: #003d7a; /* Even darker blue on active press */
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2); /* Adjust shadow on press */
+}
+
+/* Focus State */
+button:focus {
+    outline: none; /* Removes the default browser outline */
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.5); /* Add a focus ring */
+}
+
+
+/* Hide error messages */
+#nameError, #emailError, #subscriptionError {
+    display: none;
+    color:#f9f9f9;
+    font-size: 16px;
+}
+
+/* Increase radio button's size */
+input[type='radio']{
+    width: 20px;
+    height: 20px;
+}
+
+/* Thank you message */
+.thanksMessage {
+    display: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Spinner */
+.spinner {
+    position: absolute;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    display: none;
+}
+
+/* Safari Spinner */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 100%; /* Take up the full width of the device */
+        height: 35px; /* Reduce the height slightly */
+        font-size: 14px; /* Reduce the font size */
+    }
+
+    .container-small {
+        width: 80%;
+        margin: auto;
+    }
+
+    .google-form-wrapper {
+        font-size: 1.1rem;
+        text-align: left;
+        margin: 10px;
+    }
+}

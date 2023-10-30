@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RivalRealm - App Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <!-- Logo on the left -->
+            <div id="logo">
+                <h1>RivalRealm</h1>
+            </div>
+
+            <!-- Navbar on the right -->
+            <nav>
+                <ul>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#cta">Sign Up</a></li>
+                    <!-- Add more navigation items as needed -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Visual section -->
+    <section class="container visual">
+        <p class="tagline">Welcome to the future of sports.</p>
+        <img src="main-visualxcf.png">
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="container">
+        <div class="features-title">
+            <h2>Key Features</h2>
+        </div>
+        <div id="features">
+            <div class="feature-group">
+                <h3>For Users</h3>
+                <ul>
+                    <li>🔍 Easily search and join various sports competitions.</li>
+                    <li>🏆 View real-time leaderboards and track achievements.</li>
+                    <li>📅 Stay updated with competition schedules and notifications.</li>
+                    <li>🤝 Connect, chat, and form teams with other users.</li>
+                </ul>
+            </div>
+
+            <div class="feature-group">
+                <h3>For Competition Organizers</h3>
+                <ul>
+                    <li>🏅 Create and manage small competitions.</li>
+                    <li>📢 Communicate and send notifications to participants.</li>
+                    <li>💰 Monetize competitions through entry fees or sponsorships.</li>
+                    <li>🔄 Easily update match results and competition info.</li>
+                </ul>
+            </div>
+
+            <div class="feature-group">
+                <h3>For Sport Clubs</h3>
+                <ul>
+                    <li>🎪 Organize large-scale competitions with ease.</li>
+                    <li>🛡️ Showcase club's history and achievements with a dedicated profile.</li>
+                    <li>📊 Gain insights with detailed analytics and metrics.</li>
+                    <li>💼 Manage club members, categories, and collaborations.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="container-small">
+        <h2>Be the First to Experience RivalRealm</h2>
+        <p>Sign up to get notified upon release.</p>
+        <!-- Embed your Google Form iframe/link here -->
+        <div class="form-wrapper">
+            <div id="form" class="google-form-wrapper">
+                <label>Your Name</label><br>
+                <input id="nameInput" type="text"><br>
+                <span class="error" id="nameError">Name is required</span><br>
+                <label>Your Email</label><br>
+                <input id="emailInput" type="email"><br>
+                <span class="error" id="emailError">Email is required</span><br>
+                <div class="form-checkbox">
+                    <label>Which subscription plan would you choose?</label><br>
+                    <input id="user" type="radio" name="subscription" value="User only">
+                    <label for="user">User only</label><br>
+                    <input id="organizer" type="radio" name="subscription" value="Competition organizer">
+                    <label for="organizer">Competition organizer</label><br>
+                    <input id="club" type="radio" name="subscription" value="Sport club">
+                    <label for="club">Sport club</label><br>
+                </div>
+                <span class="error" id="subscriptionError">Subscription is required</span>   
+                <br>
+                <button id="submitButton">Submit</button>
+            </div> 
+            <div id="spinner" class="spinner"></div>
+            <div>
+                <p id="thanksMessage" class="thanksMessage">Thank you for signing up!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 RivalRealm. All rights reserved.</p>
+    </footer>
+</body>
+<script src="index.js"></script>
+
+</html>
